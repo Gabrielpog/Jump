@@ -10,3 +10,23 @@ end)
 Section:NewButton("jump button", "ButtonInfo", function()
     print("Clicked")
 end)
+getgenv().Toggled = false
+
+local toggle = Section:NewToggle("Toggle", "Info", (state)
+    getgenv().Toggled = state
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	if getgenv().Toggled then
+		toggle:UpdateToggle("Toggle On")
+	else
+		toggle:UpdateToggle("Toggle Off")
+	end
+end)
+
+
+
+
+
+
+
