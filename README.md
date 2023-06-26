@@ -18,6 +18,15 @@ end)
 
 game:GetService("RunService").RenderStepped:Connect(function()
 	if getgenv().Toggled then
+Section:NewKeybind("Press f to toggle", "KeybindInfo", Enum.KeyCode.F, function()
+	print("You just clicked the bind")
+end)
+
+
+
+
+
+ 
 		toggle:UpdateToggle("Toggle On")
 	else
 		toggle:UpdateToggle("Toggle Off")
